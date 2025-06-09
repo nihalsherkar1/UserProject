@@ -8,9 +8,12 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-
+@Repository
 public interface UserRepository  extends JpaRepository<User, Integer> {
 
     @Procedure(name = "User.getUsersByDepartment")
     List<User>getUserByDepartment(@Param("dept") String department);
+
+
+
 }

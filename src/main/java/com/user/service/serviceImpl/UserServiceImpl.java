@@ -24,9 +24,12 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    @Procedure(name = "User.getAllUsers")
+
     @Transactional
+    @Procedure(name = "User.getAllUsers")
     public List<User> getAllUsers() {
+
+
         return userRepository.findAll();
     }
 
